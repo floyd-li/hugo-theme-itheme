@@ -41,6 +41,7 @@ function initLazyLoad() {
     }
 
     loadAnimation = (item) => {
+      if(item.classList.contains("image-loaded")) return;
       let grandSon = item.children[0].children[0];
       let img = new Image();
       img.src = grandSon.src;
