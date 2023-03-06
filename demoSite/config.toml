@@ -1,0 +1,17 @@
+baseURL = 'http://example.org/'
+languageCode = 'zh_Hans'
+defaultContentLanguage = "zh-hans"
+hasCJKLanguage = true
+title = 'Newsroom'
+copyright = 'Floyd Li'
+theme = 'iTheme'
+paginate = 5
+[params]
+  defaultCover = 'https://www.apple.com.cn/newsroom/images/apple-logo_black.jpg.landing-regular_2x.jpg'
+  email = 'floyd.li@outlook.com'
+  [[params.socialMedia]]
+    name = 'Github'
+    url = 'https://github.com/floyd-li'
+  [[params.blogroll]]
+    name = '驭风笔记'
+    url = 'https://yufengbiji.com/'

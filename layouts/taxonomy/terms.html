@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="results">
+    <div class="results__content">
+      <div class="result" role="group">
+        <h2 class="result__title">“所有标签”</h2>
+        <div class="tags-list">
+          {{ range .Pages  }}
+          <a href="/tags/{{.Title | urlize}}">{{ .Title }} ({{ len .Pages}}) </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+</div>
+
+{{ end }}

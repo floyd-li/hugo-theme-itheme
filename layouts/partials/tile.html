@@ -1,0 +1,46 @@
+
+<li
+  role="listitem"
+  class="tile-item nr-scroll-animation
+    {{ if eq .level  1 }}
+    item-hero
+    {{ else if eq .level 2 }}
+    item-2up
+    {{ else if eq .level  3 }}
+    item-3up
+    {{ end }}
+    "
+  style="--nr-animation-transform-y:20%;"
+>
+  <a
+    href={{ .context.Permalink }}
+    class="tile large-load  medium-load small-load
+      {{ if eq .level 1 }}
+      tile-hero
+      {{ else if eq .level 2 }}
+      tile-2up
+      {{ else if eq .level 3 }}
+      tile-3up
+      {{ end }}
+      "
+    aria-label={{ .label }}
+  >
+    <div class="tile__media" aria-hidden="true">
+      <img class="cover image" data-src="{{ if .context.Params.cover }} {{ .context.Params.cover }} {{ else }} {{ site.Params.defaultCover }} {{ end }}" alt="lt"/>
+    </div>
+
+    <div class="tile__description" aria-hidden="true">
+      <div class="tile__head">
+        <div class="tile__category">
+          {{ if .context.Params.tags }}
+            {{ range first 1 .context.Params.tags }}
+              {{.}}
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="tile__headline">{{ .context.Title }}</div>
+      </div>
+      <div class="tile__timestamp icon-hide icon icon-before icon-clock">{{ .context.Date | time.Format ":date_long" }}</div>
+    </div>
+  </a>
+</li>

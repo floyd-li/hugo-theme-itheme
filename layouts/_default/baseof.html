@@ -1,0 +1,22 @@
+<!--
+ * @Description: 
+ * @Author: Floyd Li (floyd.li@outlook.com)
+ * @Date: 2023-02-27 12:50:45
+ * @LastEditors: Floyd Li (floyd.li@outlook.com)
+ * @LastEditTime: 2023-03-03 16:20:03
+-->
+<!DOCTYPE html>
+<html class="js no-touch  progressive-image  no-reduced-motion progressive" lang="zh-CN" dir="ltr">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="{{ if .IsPage }} page-article {{ else }} page-landing {{ end }}  {{ if eq .Page.Params.theme "dark" }} theme-dark {{ end }}">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+    {{ block "main" . }}
+    {{ end }}
+    {{ $isDark := eq .Page.Params.theme "dark"}}
+    {{ partial "footer.html" (dict "dark" $isDark) }}
+  </body>
+</html>

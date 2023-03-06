@@ -1,0 +1,34 @@
+<div class="footer-main {{ if eq .dark true}} footer-dark {{ end }}">
+  <div class="content-body footer-wraper">
+    <div class="footer-box">
+      <div class="foot-nav">
+        <div class="foot-nav-items">
+          <div class="item">
+            <div class="logo">{{ .Site.Title}}</div>
+            <div class="email">Email: <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></div>
+          </div>
+
+          <div class="item community">
+            <div class="item-title">社媒</div>
+            {{ range site.Params.socialMedia }}
+              <a href="{{ .url }}" target="_blank">{{ .name}}</a>
+            {{ end }}
+          </div>
+
+          <div class="item resources">
+            <div class="item-title">友链</div>
+            {{ range site.Params.blogroll }}
+              <a href="{{ .url }}" target="_blank">{{ .name}}</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="item copyright">
+          &copy; {{ now.Format "2006" }}
+          Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://github.com/floyd-li/hugo-theme-itheme" target="_blank">iTheme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

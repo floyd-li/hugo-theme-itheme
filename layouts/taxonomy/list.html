@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="results">
+    <div class="results__content">
+      <div class="result" role="group">
+        <h2 class="result__title">“{{ .Title }}”</h2>
+          {{ range .Pages  }}
+          {{ partial "archiveItem.html" (dict "context" .) }}
+          {{ end }}
+      </div>
+    </div>
+</div>
+
+{{ end }}

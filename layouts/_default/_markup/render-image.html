@@ -1,0 +1,24 @@
+
+{{ $sign := md5 .Destination}}
+
+{{ $str := split .Text "|" }}
+
+{{ $text := index $str 0 }}
+
+{{ $size := index $str 1 }}
+
+<figure class="image component image-fullbleed body-copy-wide nr-scroll-animation nr-scroll-animation--on image-{{ $size }}">  <div class="component-content">
+    <div class="image-sharesheet">
+      <div class="image image-load image-asset image-{{ $sign }}" id="lht{{ $sign }}">
+        <picture  class="picture">
+          <img class="picture-image" data-src="{{ .Destination | safeURL }}" alt="{{ .Text }}"  />
+        </picture>
+      </div>
+    </div>
+    <div class="image-description">
+      <div class="image-caption">
+        {{ $text }}
+      </div>
+    </div>
+  </div>
+</figure>

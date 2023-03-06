@@ -1,0 +1,12 @@
+<!--
+ * @Description: 
+ * @Author: Floyd Li (floyd.li@outlook.com)
+ * @Date: 2023-03-03 16:32:46
+ * @LastEditors: Floyd Li (floyd.li@outlook.com)
+ * @LastEditTime: 2023-03-03 16:35:20
+-->
+<div class="component-content pagebody component">
+  <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="pagebody-header">
+    {{ .Text | safeHTML }}
+  </h{{ .Level }}>
+</div>

@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "iTheme"
+license = "MIT"
+licenselink = "https://github.com/floyd-li/hugo-theme-itheme/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/floyd-li/hugo-theme-itheme"
+tags = ["apple","blog", "newsroom", "light", "dark"]
+features = ["blog", "apple", "newsroom"]
+min_version = "0.93.0"
+
+[author]
+  name = "Floyd Li"
+  homepage = "https://github.com/floyd-li"
+
+# If porting an existing theme
+[original]
+  name = "austin2035"
+  homepage = "https://astro.yufengbiji.com/"
+  repo = "https://github.com/austin2035/astro-air-blog"

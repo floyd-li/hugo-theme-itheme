@@ -1,0 +1,51 @@
+{{ define "main" }}
+    <section class="everydayfeed">
+    <div class="section-content">
+      <h2 class="section-head">最新文章</h2>
+      <ul role="list" class="section-tiles">
+        {{ range first 1 .Site.RegularPages }}
+          {{ $level := 1 }}
+          {{ partial "tile.html" (dict "context" . "level" $level) }}
+        {{ end }}
+
+        {{ range first 4 ( after 1 .Site.RegularPages) }}
+          {{ $level := 2 }}
+          {{ partial "tile.html" (dict "context" . "level" $level) }}
+        {{ end }}
+
+        {{ range first 6 ( after 5 .Site.RegularPages) }}
+          {{ $level := 3 }}
+          {{ partial "tile.html" (dict "context" . "level" $level) }}
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section class="more-from-newsroom">
+    <div class="section-content">
+      <h2 class="section-head">更多文章</h2>
+      <ul role="list" class="section-tiles">
+
+      {{ range first 6 .Site.RegularPages }}
+          {{ partial "moreTile.html" (dict "context" .) }}
+        {{ end }}
+      </ul>
+      <div class="view-archive-wrapper">
+        <a href="/posts" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">阅读历史文章</a>
+      </div>
+    </div>
+  </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var script = document.createElement("script");
+        script.src = "/js/animation.js";
+        document.head.appendChild(script);
+
+        script.onload = function () {
+          console.log("lazyload.js loaded");
+          // when layout is loaded, load the images
+          initImage();
+        };
+      });
+    </script>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ $cover := site.Params.defaultCover}}
+{{ if .context.Params.cover }}
+    {{ $cover = .context.Params.cover }}
+{{ end }}
+
+<a href="{{ .context.Permalink }}" class="result__item row-anchor" aria-label="{{ .context.Title }}">
+    <picture class="viewport-picture">
+        <source media="(max-width: 734px)" srcset="{{ $cover }}">
+        <img class="viewport-image" src="{{ $cover }}" srcset="{{ $cover }}" aria-hidden="true" alt="">
+    </picture>
+    <div class="item__content">
+        <p class="item__category category_update">
+            {{ if .context.Params.tags }}
+                {{ range first 1 .context.Params.tags }}
+                {{.}}
+                {{ end }}
+            {{ end }}
+        </p>
+        <h3 class="item__headline">
+            {{ .context.Title }}
+        </h3>
+            <p class="item__date">{{ .context.Date | time.Format ":date_long"  }}</p>
+    </div>
+</a>
