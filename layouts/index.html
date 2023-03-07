@@ -1,9 +1,9 @@
 {{ define "main" }}
+{{ $pages := where .Site.RegularPages "Params.plain" "ne" true }}
     <section class="everydayfeed">
     <div class="section-content">
       <h2 class="section-head">最新文章</h2>
       <ul role="list" class="section-tiles">
-        {{ $pages := where .Site.RegularPages "Params.plain" "ne" true }}
         {{ range first 1 $pages }}
           {{ $level := 1 }}
           {{ partial "tile.html" (dict "context" . "level" $level) }}
@@ -27,7 +27,7 @@
       <h2 class="section-head">更多文章</h2>
       <ul role="list" class="section-tiles">
 
-      {{ range first 6 .Site.RegularPages }}
+      {{ range first 6 $pages }}
           {{ partial "moreTile.html" (dict "context" .) }}
         {{ end }}
       </ul>
