@@ -1,8 +1,10 @@
 {{ define "main" }}
   {{ $featured := .Page.Params.featured }}
+  {{ $notPlainPage := ne .Page.Params.plain true }}
   <main id="main" class="main">
       <section>
         <article class="article">
+          {{ if $notPlainPage }}
           <div class="{{ if $featured }} featured-header {{ else }} article-header {{ end }}">
             <div class="category component">
               <div class="component-content">
@@ -37,6 +39,15 @@
               </div>
             </div>
           </div>
+          {{ else }}
+          <div class="article-header">
+            <div class="pagetitle component">
+              <div class="component-content">
+                <h1 class="hero-headline">{{ .Title }}</h1>
+              </div>
+            </div>
+          </div>
+          {{ end }}
           <div class="pagebody">
             <!-- TODO: hugo render hooks do not support custom markdown so here replace element manually -->
             {{ $content := .Content | replaceRE "<p>" "<p class=\"component-content component\">" }}
@@ -46,6 +57,7 @@
             {{ $content = $content | replaceRE "</ol>" "</ol></div>" }}
             {{ $content |  safeHTML}}
           </div>
+          {{ if $notPlainPage }}
           <div class="component">
             <div class="component-content">
               <div class="article-copyright">
@@ -56,6 +68,7 @@
               </div>
             </div>
           </div>
+          {{ end }}
         </article>
       </section>
   </main>
