@@ -3,17 +3,18 @@
     <div class="section-content">
       <h2 class="section-head">最新文章</h2>
       <ul role="list" class="section-tiles">
-        {{ range first 1 .Site.RegularPages }}
+        {{ $pages := where .Site.RegularPages "Params.plain" "ne" true }}
+        {{ range first 1 $pages }}
           {{ $level := 1 }}
           {{ partial "tile.html" (dict "context" . "level" $level) }}
         {{ end }}
 
-        {{ range first 4 ( after 1 .Site.RegularPages) }}
+        {{ range first 4 ( after 1 $pages) }}
           {{ $level := 2 }}
           {{ partial "tile.html" (dict "context" . "level" $level) }}
         {{ end }}
 
-        {{ range first 6 ( after 5 .Site.RegularPages) }}
+        {{ range first 6 ( after 5 $pages) }}
           {{ $level := 3 }}
           {{ partial "tile.html" (dict "context" . "level" $level) }}
         {{ end }}
