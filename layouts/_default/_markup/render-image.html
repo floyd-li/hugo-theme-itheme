@@ -5,7 +5,7 @@
 
 {{ $text := index $str 0 }}
 
-{{ $size := index $str 1 }}
+{{ $size := default "big" (index $str 1) }}
 
 <figure class="image component image-fullbleed body-copy-wide nr-scroll-animation nr-scroll-animation--on image-{{ $size }}">  <div class="component-content">
     <div class="image-sharesheet">
