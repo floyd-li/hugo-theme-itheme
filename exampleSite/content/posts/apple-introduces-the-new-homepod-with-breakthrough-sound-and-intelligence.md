@@ -1,7 +1,6 @@
 ---
 title: "Apple 推出新款 HomePod，带来突破性音质与智能体验"
 date: 2023-02-27T13:06:38+08:00
-draft: true
 description: "呈现出类拔萃的音质、增强的 Siri 功能以及安全放心的智能家居体验"
 author: "Apple Newsroom"
 tags: ["新闻稿", "Apple", "HomePod"]

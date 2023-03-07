@@ -10,7 +10,7 @@ theme: 'light'
 
 PlayStation VR2即将于下周发布。为表庆祝，我们准备介绍数部即将登陆此平台的虚幻引擎VR游戏，以及一些准备登陆Meta Quest、PCVR等平台的虚幻VR作品。
 
-![PS](https://cdn2.unrealengine.com/vr-week-2023-header-4-1920x1080-376e6c48383f.jpg?resize=1&w=1920)
+![PS|inline](https://cdn2.unrealengine.com/vr-week-2023-header-4-1920x1080-376e6c48383f.jpg?resize=1&w=1920)
 
 2023年VR游戏周将从2月21日（周二）一直持续到2月25日（周六）。届时，我们将向大家介绍一系列优秀的VR游戏案例，并推介以下项目：
 《Hubris》
