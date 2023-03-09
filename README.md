@@ -10,7 +10,7 @@ An Apple style theme for [Hugo](https://gohugo.io/), inspired by [astro-air-blog
 
 ## Screenshot
 
-![screenshot](https://github.com/floyd-li/hugo-theme-itheme/blob/master/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/floyd-li/hugo-theme-itheme/master/images/screenshot.png)
 
 ## Features
 
