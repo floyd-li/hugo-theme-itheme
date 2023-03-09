@@ -1,5 +1,5 @@
 name = "iTheme"
-license = "MIT"
+license = "GPL-3.0"
 licenselink = "https://github.com/floyd-li/hugo-theme-itheme/blob/master/LICENSE"
 description = "An Apple's Style Theme"
 homepage = "https://github.com/floyd-li/hugo-theme-itheme"
