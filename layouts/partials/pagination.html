@@ -1,30 +1,38 @@
 {{ $pag := .Paginator }}
-<nav class="pagination-ctrl" aria-label="新闻分页">
+<nav class="pagination-ctrl" aria-label="Articles">
   <div class="pagination-ctrl__content">
     {{ if $pag.HasPrev }}
-    <a role="button" href="{{ $pag.Prev.URL }}" class="pagination-ctrl__btn icon icon-paginationleft pagination-ctrl__btn--previous" aria-disabled="false" aria-label="上一页" tabindex="0">
-    {{ else }}
-    <a role="button" href="#" class="pagination-ctrl__btn icon icon-paginationleft pagination-ctrl__btn--previous pagination-ctrl__btn--disabled" aria-disabled="true" aria-label="上一页" tabindex="0">
-    {{ end }}
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
-      <path d="M0 0h24v24H0V0z" fill="none"/>
-      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
-    </svg>
-    </a>
-    <div class="pagination-ctrl__info">
-      <span class="pagination-ctrl__info__text pagination-ctrl__info--current">{{ $pag.PageNumber }}</span>
-      <span class="pagination-ctrl__info__text"> 页 </span>
-      <span class="pagination-ctrl__info__text pagination-ctrl__info--total">{{ $pag.TotalPages}}</span>
-    </div>
-    {{ if $pag.HasNext}}
-    <a role="button" href="{{ $pag.Next.URL }}" class="pagination-ctrl__btn icon icon-paginationright pagination-ctrl__btn--next" aria-label="下一页" aria-disabled="false">
-    {{ else }}
-    <a role="button" href="#" class="pagination-ctrl__btn icon icon-paginationright pagination-ctrl__btn--next pagination-ctrl__btn--disabled" aria-label="下一页" aria-disabled="true">
-    {{ end }}
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
-        <path d="M0 0h24v24H0V0z" fill="none"/>
-        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
-      </svg>
-    </a>
+    <a role="button" href="{{ $pag.Prev.URL }}"
+      class="pagination-ctrl__btn icon icon-paginationleft pagination-ctrl__btn--previous" aria-disabled="false"
+      aria-label="Previous page" tabindex="0">
+      {{ else }}
+      <a role="button" href="#"
+        class="pagination-ctrl__btn icon icon-paginationleft pagination-ctrl__btn--previous pagination-ctrl__btn--disabled"
+        aria-disabled="true" aria-label="Previous page" tabindex="0">
+        {{ end }}
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z" />
+        </svg>
+      </a>
+      <div class="pagination-ctrl__info">
+        <span class="pagination-ctrl__info__text pagination-ctrl__info--current">{{ $pag.PageNumber }}</span>
+        <span class="pagination-ctrl__info__text">of</span>
+        <span class="pagination-ctrl__info__text pagination-ctrl__info--total">{{ $pag.TotalPages}}</span>
+      </div>
+      {{ if $pag.HasNext}}
+      <a role="button" href="{{ $pag.Next.URL }}"
+        class="pagination-ctrl__btn icon icon-paginationright pagination-ctrl__btn--next" aria-label="Next page"
+        aria-disabled="false">
+        {{ else }}
+        <a role="button" href="#"
+          class="pagination-ctrl__btn icon icon-paginationright pagination-ctrl__btn--next pagination-ctrl__btn--disabled"
+          aria-label="Next page" aria-disabled="true">
+          {{ end }}
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z" />
+          </svg>
+        </a>
   </div>
 </nav>
