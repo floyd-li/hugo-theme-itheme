@@ -34,15 +34,15 @@ Then you need to add some configuration to `config.toml`, please flow the [Site 
 
 ```toml
 [params]
-  defaultCover = 'https://example.com/cover.jpg' // default cover image for post not setting cover
-  email = 'floyd.li@outlook.com' // the email address display in the footer
-  [[params.socialMedia]] // custom social links display in the footer, you can add one or more
+  defaultCover = 'https://example.com/cover.jpg' # default cover image for post not setting cover
+  email = 'floyd.li@outlook.com' # the email address display in the footer
+  [[params.socialMedia]] # custom social links display in the footer, you can add one or more
     name = 'Github'
     url = 'https://github.com/floyd-li'
   [[params.socialMedia]]
     name = 'Twitter'
     url = 'https://twitter.com/some-one'
-  [[params.blogroll]] // blogroll links display in the footer, you can add one or more
+  [[params.blogroll]] # blogroll links display in the footer, you can add one or more
     name = 'Apple'
     url = 'https://Apple.com/'
   [[params.blogroll]]
