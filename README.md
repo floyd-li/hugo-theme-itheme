@@ -16,6 +16,7 @@ An Apple style theme for [Hugo](https://gohugo.io/), inspired by [astro-air-blog
 
 - `Light` and `Dark` mode for post
 - Three different sizes for images in the post
+- `i18n` support (currently only support `en` and `zh-hans`, there is a great need for contributing translation)
 
 ## Usage
 
@@ -33,6 +34,7 @@ Then you need to add some configuration to `config.toml`, please flow the [Site 
 ### Site Configuration
 
 ```toml
+defaultContentLanguage = "en" # current only supported 'en' and 'zh-hans', see the 'i18n' folder
 [params]
   defaultCover = 'https://example.com/cover.jpg' # default cover image for post not setting cover
   email = 'floyd.li@outlook.com' # the email address display in the footer
