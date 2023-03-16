@@ -1,0 +1,30 @@
+[home]
+    other = "首页"
+[posts]
+    other = "目录"
+[about]
+    other = "关于"
+[latestArticles]
+    other = "最新文章"
+[moreArticles]
+    other = "更多文章"
+[viewArchive]
+    other ="阅读历史文章"
+[socialMedia]
+    other = "社交媒体"
+[related]
+    other = "友链"
+[pagination]
+    other = "分页"
+[of]
+    other = "页"
+[allTags]
+    other = "所有标签"
+[author]
+    other = "作者"
+[postDate]
+    other = "发表日期"
+[copyright]
+    other = "版权声明"
+[licenses]
+    other = "版权声明：署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)"

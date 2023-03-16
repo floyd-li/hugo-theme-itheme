@@ -1,0 +1,30 @@
+[home]
+    other = "Home"
+[posts]
+    other = "Articles"
+[about]
+    other = "About"
+[latestArticles]
+    other = "Articles"
+[moreArticles]
+    other = "More Articles"
+[viewArchive]
+    other ="View Archive"
+[socialMedia]
+    other = "Social Media"
+[related]
+    other = "Related"
+[pagination]
+    other = "Pagination"
+[of]
+    other = "of"
+[allTags]
+    other = "All Tags"
+[author]
+    other = "Author"
+[postDate]
+    other = "Posted on"
+[copyright]
+    other = "Copyright"
+[licenses]
+    other = "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"

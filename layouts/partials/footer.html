@@ -9,14 +9,14 @@
           </div>
 
           <div class="item community">
-            <div class="item-title">社媒</div>
+            <div class="item-title">{{ i18n "socialMedia" }}</div>
             {{ range site.Params.socialMedia }}
               <a href="{{ .url }}" target="_blank">{{ .name}}</a>
             {{ end }}
           </div>
 
           <div class="item resources">
-            <div class="item-title">友链</div>
+            <div class="item-title">{{ i18n "related" }}</div>
             {{ range site.Params.blogroll }}
               <a href="{{ .url }}" target="_blank">{{ .name}}</a>
             {{ end }}

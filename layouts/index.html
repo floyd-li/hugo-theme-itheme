@@ -2,7 +2,7 @@
 {{ $pages := where .Site.RegularPages "Params.plain" "ne" true }}
     <section class="everydayfeed">
     <div class="section-content">
-      <h2 class="section-head">最新文章</h2>
+      <h2 class="section-head">{{ i18n "latestArticles" }}</h2>
       <ul role="list" class="section-tiles">
         {{ range first 1 $pages }}
           {{ $level := 1 }}
@@ -24,7 +24,7 @@
 
   <section class="more-from-newsroom">
     <div class="section-content">
-      <h2 class="section-head">更多文章</h2>
+      <h2 class="section-head">{{ i18n "moreArticles" }}</h2>
       <ul role="list" class="section-tiles">
 
       {{ range first 6 $pages }}
@@ -32,7 +32,7 @@
         {{ end }}
       </ul>
       <div class="view-archive-wrapper">
-        <a href="/posts" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">阅读历史文章</a>
+        <a href="/posts" class="cta-primary-light" data-analytics-region="router" data-analytics-title="view archive">{{ i18n "viewArchive"}}</a>
       </div>
     </div>
   </section>

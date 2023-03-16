@@ -2,7 +2,7 @@
 <div class="results">
     <div class="results__content">
       <div class="result" role="group">
-        <h2 class="result__title">“所有标签”</h2>
+        <h2 class="result__title">“{{ i18n "allTags" }}”</h2>
         <div class="tags-list">
           {{ range .Pages  }}
           <a href="/tags/{{.Title | urlize}}">{{ .Title }} ({{ len .Pages}}) </a>
