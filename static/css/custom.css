@@ -3,7 +3,9 @@ header{
   top: 0;
   z-index: 2;
 }
-
+.nav{
+  backdrop-filter: blur(10px);
+}
 .nav::after{
   position: absolute;
   content: " ";
@@ -12,7 +14,6 @@ header{
   left: 0;
   right: 0;
   background: var(--footer-background);
-  backdrop-filter: saturate(180%) blur(5px);
   opacity: 0.8;
 }
 
