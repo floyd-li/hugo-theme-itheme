@@ -18,6 +18,39 @@ blockquote {
   }
 }
 
+h1.pagebody-header {
+  font-size: 1.5em;
+}
+
+h2.pagebody-header{
+  font-size: 1.4em;
+}
+
+h3.pagebody-header{
+  font-size: 1.3em;
+}
+
+h4.pagebody-header{
+  font-size: 1.2em;
+}
+
+h5.pagebody-header{
+  font-size: 1.1em;
+}
+
+h6.pagebody-header{
+  font-size: 1em;
+}
+
+.code pre {
+  border-radius: 0;
+}
+
+code {
+  margin: 0 0 0 0.2em;
+  line-height: 1.8em;
+}
+
 .pagination-ctrl {
   margin-top: 60px;
   margin-bottom: 60px
