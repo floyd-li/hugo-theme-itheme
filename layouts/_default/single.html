@@ -53,8 +53,10 @@
             {{ $content := .Content | replaceRE "<p>" "<p class=\"component-content component\">" }}
             {{ $content = $content | replaceRE "<table>" "<div class=\"component-content component\"><table>" }}
             {{ $content = $content | replaceRE "</table>" "</table></div>" }}
-              {{ $content = $content | replaceRE "<ol>" "<div class=\"component-content component\"><ol>" }}
+            {{ $content = $content | replaceRE "<ol>" "<div class=\"component-content component\"><ol>" }}
             {{ $content = $content | replaceRE "</ol>" "</ol></div>" }}
+            {{ $content = $content | replaceRE "<ul>" "<div class=\"component-content component\"><ul>" }}
+            {{ $content = $content | replaceRE "</ul>" "</ul></div>" }}
             {{ $content |  safeHTML}}
           </div>
           {{ if $notPlainPage }}
