@@ -1,3 +1,23 @@
+blockquote {
+  width: 653px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1068px) {
+  blockquote {
+    width: 576px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  blockquote {
+    width: 87.5%;
+    max-width: 414px;
+  }
+}
+
 .pagination-ctrl {
   margin-top: 60px;
   margin-bottom: 60px
@@ -23,13 +43,8 @@
 
 @media only screen and (max-width: 734px) {
   .pagination-ctrl__content {
-    padding:0 16px
-  }
-}
-
-@media only screen and (max-width: 734px) {
-  .pagination-ctrl__content {
-    max-width:314px
+    padding:0 16px;
+    max-width:314px;
   }
 }
 
