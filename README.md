@@ -2,11 +2,37 @@
 
 ## Introduction
 
+[中文说明](https://github.com/floyd-li/hugo-theme-itheme/blob/master/README_CN.md)
+
 An Apple style theme for [Hugo](https://gohugo.io/), inspired by [astro-air-blog](https://github.com/austin2035/astro-air-blog)
 
 ## Preview
 
 [Demo Site](https://hugo-theme-itheme.netlify.app)
+
+## Quick Start
+
+Before you start, make sure you have installed [Hugo](https://gohugo.io/).
+
+### Quick start with the demo site
+
+Here's the [demo site repo](https://github.com/floyd-li/itheme-demo-site)
+
+```bash
+git clone https://github.com/floyd-li/itheme-demo-site.git my-site
+cd ./my-site && hugo -server -D
+```
+
+Then you can visit `http://localhost:1313` to see the demo site!
+
+### Use the theme for existed site
+
+```bash
+git submodule add https://github.com/floyd-li/hugo-theme-itheme.git themes/hugo-theme-itheme
+echo "theme = 'hugo-theme-itheme'" >> config.toml
+```
+
+Then you need to add some configuration to `config.toml`, please flow the [Site Configuration](#site-configuration).
 
 ## Screenshot
 
@@ -17,17 +43,6 @@ An Apple style theme for [Hugo](https://gohugo.io/), inspired by [astro-air-blog
 - `Light` and `Dark` mode for post
 - Three different sizes for images in the post
 - `i18n` support (currently only support `en` and `zh-hans`, there is a great need for contributing translation)
-
-## Usage
-
-Please flow the [official quickstart](https://gohugo.io/getting-started/quick-start/), it's really easy and simple.
-
-```bash
-git submodule add https://github.com/floyd-li/hugo-theme-itheme.git themes/hugo-theme-itheme
-echo "theme = 'hugo-theme-itheme'" >> config.toml
-```
-
-Then you need to add some configuration to `config.toml`, please flow the [Site Configuration](#site-configuration).
 
 ## Configuration
 
@@ -69,8 +84,8 @@ theme: "dark" // you can set 'light' or 'dark' here
 
 ### Three display modes of images
 
-The three display modes of images are: `wide`, `big`, `inline`.
-When you edit your markdown file, you can add `wide` or `big` or `inline` to the image alt, like this:
+The three display modes of images are: `inline`, `big`, `wide`, you can visit the [demo site](https://hugo-theme-itheme.netlify.app/posts/mark-down-syntax/#Image) for preview
+When you edit your markdown file, you can add `inline`, `big` or `wide` to the image alt, like this:
 
 ```markdown
 ![alt content|wide](a.png)
