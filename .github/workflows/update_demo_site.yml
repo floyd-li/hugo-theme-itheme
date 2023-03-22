@@ -12,9 +12,8 @@ jobs:
     steps:
     - name: Triger Update Theme Action
       env:
-        CI_TOKEN: ${{ secrets.CI_TOKEN }}
         USER: ${{ github.actor }}
         REPO: itheme-demo-site
         EVENT_TYPE: UpdateTheme
       run: |
-        curl -X POST https://api.github.com/repos/$USER/$REPO/dispatches  -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: token $CI_TOKEN"  --data '{"event_type": "$EVENT_TYPE"}'
+        curl -X POST https://api.github.com/repos/$USER/$REPO/dispatches  -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN}}"  --data '{"event_type": "$EVENT_TYPE"}'
