@@ -16,12 +16,4 @@ jobs:
         REPO: itheme-demo-site
         EVENT_TYPE: UpdateTheme
       run: |
-        curl -X POST https://api.github.com/repos/${{ env.USER }}/$${{ env.REPO }}/dispatches  -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: Bearer ${{ secrets.ACTIONS_TRIGGER_PAT }}"  --data '{"event_type": "${{ env.EVENT_TYPE }}"}'
-    
-    - name: Setup upterm session
-      uses: lhotari/action-upterm@v1
-      with:
-        ## limits ssh access and adds the ssh public key for the user which triggered the workflow
-        limit-access-to-actor: true
-        ## limits ssh access and adds the ssh public keys of the listed GitHub users
-        limit-access-to-users: githubuser1,githubuser2
+        curl -X POST https://api.github.com/repos/${{ env.USER }}/${{ env.REPO }}/dispatches  -H "Accept: application/vnd.github.everest-preview+json" -H "Authorization: Bearer ${{ secrets.ACTIONS_TRIGGER_PAT }}"  --data '{"event_type": "${{ env.EVENT_TYPE }}"}'
