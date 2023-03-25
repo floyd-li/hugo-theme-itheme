@@ -1,5 +1,7 @@
 # iTheme theme for Hugo
 
+**如果喜欢这个主题, 请[给我点赞](https://github.com/floyd-li/hugo-theme-itheme)！**
+
 ## 介绍
 
 [English Readme](https://github.com/floyd-li/hugo-theme-itheme/blob/master/README.md)
