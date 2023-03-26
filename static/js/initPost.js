@@ -14,7 +14,7 @@ scriptMd5.onload = function () {
 
 function initLazyLoad() {
   var script = document.createElement("script");
-  script.src = "/js/animation.js";
+  script.src = {{ "js/animation.js" | relURL  }};
   document.head.appendChild(script);
 
   script.onload = function () {
