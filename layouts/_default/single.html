@@ -32,7 +32,8 @@
             <div class="tagssheet component">
               <div class="component-content">
                 {{ range .Page.Params.tags}}
-                  <a href="/tags/{{. | urlize}}" class="tag">
+                  {{ $url := printf "%s%s" "tags/" .  }}
+                  <a href="{{ $url | urlize | relURL }}" class="tag">
                     {{ . }}
                   </a>
                 {{ end }}
