@@ -1,5 +1,4 @@
 import params from "@params"
-console.log("🚀 ~ file: initPost.js:2 ~ params:", params)
 // console.log("postInit.js loaded");
 var scriptMd5 = document.createElement("script");
 scriptMd5.src =  `${params.baseURL}js/md5.js`;
