@@ -79,7 +79,12 @@
 
   <script>
     var script = document.createElement("script");
-    script.src = "/js/initPost.js";
+    {{- $js := resources.Get "js/initPost.js" -}}
+    {{- $opts := dict 
+      "params" (dict "baseURL" site.BaseURL) 
+    -}}
+    {{- $js = $js | js.Build $opts -}}
+    script.src = {{ $js.Permalink }};
     document.head.appendChild(script);
   </script>
 {{ end }}

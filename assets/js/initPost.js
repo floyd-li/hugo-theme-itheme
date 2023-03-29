@@ -1,7 +1,8 @@
-
+import params from "@params"
+console.log("🚀 ~ file: initPost.js:2 ~ params:", params)
 // console.log("postInit.js loaded");
 var scriptMd5 = document.createElement("script");
-scriptMd5.src = "/js/md5.js";
+scriptMd5.src =  `${params.baseURL}js/md5.js`;
 document.head.appendChild(scriptMd5);
 
 scriptMd5.onload = function () {
@@ -14,7 +15,7 @@ scriptMd5.onload = function () {
 
 function initLazyLoad() {
   var script = document.createElement("script");
-  script.src = {{ "js/animation.js" | relURL  }};
+  script.src =  `${params.baseURL}js/animation.js`;
   document.head.appendChild(script);
 
   script.onload = function () {
