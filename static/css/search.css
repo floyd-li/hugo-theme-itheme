@@ -1,0 +1,101 @@
+#modalSearch{
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+#modalSearch .modal-dialog{
+  left: 25vw;
+  right: 25vw;
+  position: absolute;
+  top: 20vh;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px 0 rgba(37,44,97,.15), 0 4px 6px 0 rgba(93,100,148,.2)
+}
+
+.aa-input-container{
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+}
+.algolia-autocomplete{
+  width: 100%;
+}
+.aa-input-search {
+  width: 100%;
+  padding: 12px 28px 12px 36px;
+  border: 2px solid #e4e4e4;
+  border-radius: 4px;
+  transition: .2s;
+  font-size: 11px;
+  box-sizing: border-box;
+  color: #333;
+  appearance: none;
+}
+.aa-input-search::-webkit-search-decoration,
+.aa-input-search::-webkit-search-cancel-button,
+.aa-input-search::-webkit-search-results-button,
+.aa-input-search::-webkit-search-results-decoration {
+  display: none;
+}
+.aa-input-search:focus {
+  outline: 0;
+  border-color: #0071e3;
+}
+.aa-input-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  z-index: 1;
+  transform: translateY(-50%);
+  fill: #e4e4e4;
+}
+.aa-hint {
+  color: #e4e4e4;
+}
+.aa-dropdown-menu {
+  background-color: #fff;
+  border: 2px solid rgba(228, 228, 228, 0.6);
+  border-top-width: 1px;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 4px 4px 0 rgba(241, 241, 241, 0.35);
+  font-size: 11px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.aa-suggestion {
+  padding: 12px;
+  border-top: 1px solid rgba(228, 228, 228, 0.6);
+  cursor: pointer;
+  transition: .2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aa-suggestion:hover, .aa-suggestion.aa-cursor {
+    background-color: rgba(241, 241, 241, 0.35);
+}
+.aa-suggestion > span:first-child {
+    color: #333;
+}
+.aa-suggestion > span:last-child {
+    text-transform: uppercase;
+    color: #a9a9a9;
+}
+.aa-suggestion > span:first-child em, .aa-suggestion > span:last-child em {
+  font-weight: 700;
+  font-style: normal;
+  background-color: rgba(58, 150, 207, 0.1);
+  padding: 2px 0 2px 2px;
+}
