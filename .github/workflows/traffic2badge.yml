@@ -1,0 +1,65 @@
+name: traffic2badge
+on:
+  push:
+  schedule:
+    - cron: '10 0 * * *'
+
+jobs:
+  run:
+    name: Make GitHub Traffic to Badge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.3.4
+
+      - name: Get Repo List
+        id: repo
+        uses: yi-Xu-0100/repo-list-generator@v0.4.1
+
+      - name: Get Commit Message
+        id: message
+        uses: actions/github-script@v3.1.0
+        env:
+          FULL_COMMIT_MESSAGE: '${{ github.event.head_commit.message }}'
+        with:
+          result-encoding: string
+          script: |
+            var message = `${process.env.FULL_COMMIT_MESSAGE}`;
+            core.info(message);
+            if (message != '') return message;
+            var time = new Date(Date.now()).toISOString();
+            core.info(time);
+            return `Get traffic data at ${time}`;
+
+      - name: Set traffic
+        id: traffic
+        uses: yi-Xu-0100/traffic-to-badge@v1.4.0
+        with:
+          my_token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
+          static_list: '${{ steps.repo.outputs.repoList }}'
+          #(default) traffic_branch: traffic
+          #(default) views_color: brightgreen
+          #(default) clones_color: brightgreen
+          #(default) views_week_color: brightgreen
+          #(default) clones_week_color: brightgreen
+          #(default) total_views_color: brightgreen
+          #(default) total_clones_color: brightgreen
+          #(default) total_views_week_color: brightgreen
+          #(default) total_clones_week_color: brightgreen
+          #(default) logo: github
+          year: 2023
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: ${{ steps.traffic.outputs.traffic_branch }}
+          publish_dir: ${{ steps.traffic.outputs.traffic_path }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          full_commit_message: ${{ steps.message.outputs.result }}
+
+      - name: Show traffic data
+        run: |
+          cd ${{ steps.traffic.outputs.traffic_path }}
+          ls -a
