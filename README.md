@@ -2,6 +2,9 @@
 
 **If you like this theme, please [give me a star](https://github.com/floyd-li/hugo-theme-itheme)!**
 
+![clones](https://raw.githubusercontent.com/floyd-li/traffic-to-badge/traffic/traffic-hugo-theme-itheme/clones.svg)
+![clones per week](https://raw.githubusercontent.com/floyd-li/traffic-to-badge/traffic/traffic-hugo-theme-itheme/clones_per_week.svg)
+
 ## Introduction
 
 [中文说明](https://github.com/floyd-li/hugo-theme-itheme/blob/master/README_CN.md)
