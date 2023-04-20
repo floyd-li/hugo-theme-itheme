@@ -21,7 +21,7 @@
 这是[测试站点的仓库](https://github.com/floyd-li/itheme-demo-site)
 
 ```bash
-git clone https://github.com/floyd-li/itheme-demo-site.git my-site
+git clone --recurse-submodules https://github.com/floyd-li/itheme-demo-site.git my-site
 cd ./my-site && hugo server -D
 ```
 
