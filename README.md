@@ -25,7 +25,7 @@ Here's the [demo site repo](https://github.com/floyd-li/itheme-demo-site)
 
 ```bash
 git clone https://github.com/floyd-li/itheme-demo-site.git my-site
-cd ./my-site && hugo -server -D
+cd ./my-site && hugo server -D
 ```
 
 Then you can visit `http://localhost:1313` to see the demo site!
