@@ -18,7 +18,7 @@ autocomplete('#aa-search-input',
     templates: {
         suggestion: function(suggestion) {
             console.log(suggestion);
-            return '<span>' + '<a href="' + suggestion.uri + '">' +
+            return '<span>' + '<a href="' + {{ .Site.BaseURL }} + suggestion.uri + '">' +
             suggestion._highlightResult.title.value + '</a></span>';
         }
     }
