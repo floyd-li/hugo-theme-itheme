@@ -23,20 +23,31 @@
     </div>
   </div>
 </nav>
-<div id="modalSearch" style="display: none;" onclick="toggleSearchModal()">
-    <div class="modal-dialog">
-      <div class="modal-body">
-          {{ partial "search.html" . }}
-      </div>
-    </div>
-</div>
+
 <script>
   function toggleSearchModal(){
-    const modal = document.querySelector("#modalSearch")
-    if(modal.style.display === "none"){
-      modal.setAttribute("style","display:block")
+    const template = `
+    <div class="modal-body">
+      <div id="autocomplete"></div>
+    </div>
+    `
+    const modal = document.querySelector("#modal-wrapper")
+    console.log("🚀 ~ file: header.html:37 ~ toggleSearchModal ~ modal:", modal)
+    if(!modal){
+      const div = document.createElement("div")
+      div.setAttribute("id", "modal-wrapper")
+      div.innerHTML = template
+      const script = document.createElement("script");
+      {{- $js := resources.Get "js/algolia.js" -}}
+      {{- $opts := dict
+        "params" (dict "params" site.Params "baseURL" site.BaseURL)
+      -}}
+      {{- $js = $js | js.Build $opts -}}
+      script.setAttribute("src", {{ $js.Permalink }})
+      div.appendChild(script)
+      document.body.append(div)
     } else {
-      modal.setAttribute("style","display:none")
+      document.body.removeChild(modal)
     }
   }
 </script>
