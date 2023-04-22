@@ -11,5 +11,7 @@
     {{ end }}
     {{ $isDark := eq .Page.Params.theme "dark"}}
     {{ partial "footer.html" (dict "dark" $isDark) }}
+
+    {{ partial "scripts.html" . }}
   </body>
 </html>
