@@ -24,7 +24,7 @@ Before you start, make sure you have installed [Hugo](https://gohugo.io/).
 Here's the [demo site repo](https://github.com/floyd-li/itheme-demo-site)
 
 ```bash
-git clone https://github.com/floyd-li/itheme-demo-site.git my-site
+git clone --recurse-submodules https://github.com/floyd-li/itheme-demo-site.git my-site
 cd ./my-site && hugo server -D
 ```
 
