@@ -16,8 +16,14 @@
 
     <link rel="stylesheet" href="{{ "css/search.css" | relURL }}" />
 
+    <!-- algolia related style -->
     {{ if site.Params.algolia.enabled }}
     <link rel="stylesheet" href="{{ "css/autocomplete-theme-classic.css" | relURL }}" />
+    {{ end }}
+
+    <!-- custom style files -->
+    {{ range site.Params.css }}
+    <link rel="stylesheet" href="{{ .url | relURL }}" />
     {{ end }}
 
 </head>

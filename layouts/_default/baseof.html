@@ -12,6 +12,15 @@
     {{ $isDark := eq .Page.Params.theme "dark"}}
     {{ partial "footer.html" (dict "dark" $isDark) }}
 
-    {{ partial "scripts.html" . }}
   </body>
+    <!-- algolia related script -->
+    {{ if site.Params.algolia.enabled }}
+    <script src="{{ "js/algoliasearch.umd.js" | relURL }}"></script>
+    <script src="{{ "js/autocomplete-js.js" | relURL }}"></script>
+    {{ end }}
+
+    <!-- custom js files -->
+    {{ range site.Params.js }}
+        <script src="{{ .url | relURL }}"></script>
+    {{ end }}
 </html>
