@@ -28,14 +28,15 @@
   function toggleSearchModal(){
     const template = `
     <div class="modal-body">
-      <div id="autocomplete"></div>
+      <div id="autocomplete" onclick="event.stopPropagation();"></div>
     </div>
     `
     const modal = document.querySelector("#modal-wrapper")
-    console.log("🚀 ~ file: header.html:37 ~ toggleSearchModal ~ modal:", modal)
     if(!modal){
       const div = document.createElement("div")
+      document.body.setAttribute("style","overflow: hidden;")
       div.setAttribute("id", "modal-wrapper")
+      div.setAttribute("onclick", "toggleSearchModal()")
       div.innerHTML = template
       const script = document.createElement("script");
       {{- $js := resources.Get "js/algolia.js" -}}
@@ -47,6 +48,7 @@
       div.appendChild(script)
       document.body.append(div)
     } else {
+      document.body.removeAttribute("style")
       document.body.removeChild(modal)
     }
   }
