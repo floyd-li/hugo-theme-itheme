@@ -15,14 +15,11 @@
     <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 
     <link rel="stylesheet" href="{{ "css/search.css" | relURL }}" />
-    <script
-    src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.0/dist/algoliasearch.umd.js"
-    integrity="sha256-4VKW0mBKZ+L5cl5Ln97mb+7rHephtIsGu06NioLZ1JQ="
-    crossorigin="anonymous"
-    ></script>
-    <script src="{{ "https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"  }}"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
-    />
+
+    {{ if site.Params.algolia.enabled }}
+    <link rel="stylesheet" href="{{ "css/autocomplete-theme-classic.css" | relURL }}" />
+    <script src="{{ "js/algoliasearch.umd.js" | relURL }}"></script>
+    <script src="{{ "js/autocomplete-js.js" | relURL }}"></script>
+    {{ end }}
+
 </head>
