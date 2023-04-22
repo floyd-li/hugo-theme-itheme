@@ -55,6 +55,11 @@ defaultContentLanguage = "en" # 默认语言，当前仅支持英文(en)和简�
 [params]
   defaultCover = 'https://example.com/cover.jpg' # 文章未设置封面时的默认封面图
   email = 'floyd.li@outlook.com' # 页脚显示的邮件地址the email address display in the footer
+  [params.algolia] # Algolia搜索功能配置
+    enabled = true # 是否启用Algolia搜索功能
+    appId = 'YOUR_KEY' # Algolia appid
+    appKey = 'YOUR_APP_KEY' # Algolia appkey
+    searchIndex = 'YOUR_INDEX' # Algolia index
   [[params.socialMedia]] # 页脚显示的自定义的媒体链接，可添加多个
     name = 'Github'
     url = 'https://github.com/floyd-li'

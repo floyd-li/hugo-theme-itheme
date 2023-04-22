@@ -48,6 +48,7 @@ Then you need to add some configuration to `config.toml`, please flow the [Site 
 - `Light` and `Dark` mode for post
 - Three different sizes for images in the post
 - `i18n` support (currently only support `en` and `zh-hans`, there is a great need for contributing translation)
+- [Algolia](https://www.algolia.com/) search integration
 
 ## Configuration
 
@@ -58,6 +59,11 @@ defaultContentLanguage = "en" # current only supported 'en' and 'zh-hans', see t
 [params]
   defaultCover = 'https://example.com/cover.jpg' # default cover image for post not setting cover
   email = 'floyd.li@outlook.com' # the email address display in the footer
+  [params.algolia] # Algolia search configuration
+    enabled = true # enable Algolia search
+    appId = 'YOUR_KEY' # appid for Algolia search
+    appKey = 'YOUR_APP_KEY' # appkey for Algolia search
+    searchIndex = 'YOUR_INDEX' # index for Algolia search
   [[params.socialMedia]] # custom social links display in the footer, you can add one or more
     name = 'Github'
     url = 'https://github.com/floyd-li'
