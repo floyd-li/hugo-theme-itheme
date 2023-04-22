@@ -49,6 +49,7 @@ Then you need to add some configuration to `config.toml`, please flow the [Site 
 - Three different sizes for images in the post
 - `i18n` support (currently only support `en` and `zh-hans`, there is a great need for contributing translation)
 - [Algolia](https://www.algolia.com/) search integration
+- Custom JavaScript/CSS support (You may put these files in `static/` directory)
 
 ## Configuration
 
@@ -64,6 +65,14 @@ defaultContentLanguage = "en" # current only supported 'en' and 'zh-hans', see t
     appId = 'YOUR_KEY' # appid for Algolia search
     appKey = 'YOUR_APP_KEY' # appkey for Algolia search
     searchIndex = 'YOUR_INDEX' # index for Algolia search
+  [[params.css]] # custom css stylesheet, you can add one or more, url is relative in 'static' folder
+    url = 'css1.css'
+  [[params.css]]
+    url = 'css2.css'
+  [[params.js]] # custom javascript, you can add one or more, url is relative in 'static' folder
+    url = 'js1.js'
+  [[params.js]]
+    url = 'js2.js'
   [[params.socialMedia]] # custom social links display in the footer, you can add one or more
     name = 'Github'
     url = 'https://github.com/floyd-li'

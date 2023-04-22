@@ -45,6 +45,8 @@ echo "theme = 'hugo-theme-itheme'" >> config.toml
 - 支持文章`明``暗`两种风格
 - 文中配置支持三种不同的大小
 - 多语言支持（当前仅支持了中文和英文，欢迎提交其他语言的翻译）
+- 支持[Algolia](https://www.algolia.com/)搜索
+- 支持自定义JavaScript/CSS文件（文件需置于`static/`目录中）
 
 ## 配置
 
@@ -60,6 +62,14 @@ defaultContentLanguage = "en" # 默认语言，当前仅支持英文(en)和简�
     appId = 'YOUR_KEY' # Algolia appid
     appKey = 'YOUR_APP_KEY' # Algolia appkey
     searchIndex = 'YOUR_INDEX' # Algolia index
+  [[params.css]] # 自定义CSS样式文件，可添加多个，文件位于'static'目录下，相对路径
+    url = 'css1.css'
+  [[params.css]]
+    url = 'css2.css'
+  [[params.js]] # 自定义JavaScript文件，可添加多个，文件位于'static'目录下，相对路径
+    url = 'js1.js'
+  [[params.js]]
+    url = 'js2.js'
   [[params.socialMedia]] # 页脚显示的自定义的媒体链接，可添加多个
     name = 'Github'
     url = 'https://github.com/floyd-li'
