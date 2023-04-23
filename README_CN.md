@@ -1,6 +1,9 @@
 # iTheme theme for Hugo
 
-**如果喜欢这个主题, 请[给我点赞](https://github.com/floyd-li/hugo-theme-itheme)！**
+**如果喜欢这个主题, [请给我点赞!](https://github.com/floyd-li/hugo-theme-itheme)**
+
+![clones](https://raw.githubusercontent.com/floyd-li/traffic-to-badge/traffic/traffic-hugo-theme-itheme/clones.svg)
+![clones per week](https://raw.githubusercontent.com/floyd-li/traffic-to-badge/traffic/traffic-hugo-theme-itheme/clones_per_week.svg)
 
 ## 介绍
 
