@@ -4,7 +4,7 @@ defaultContentLanguage = "en"
 hasCJKLanguage = true
 title = 'Apple Newsroom'
 copyright = 'Floyd Li'
-theme = 'iTheme'
+theme = 'hugo-theme-itheme'
 paginate = 5
 [params]
   defaultCover = 'https://www.apple.com.cn/newsroom/images/apple-logo_black.jpg.landing-regular_2x.jpg'
