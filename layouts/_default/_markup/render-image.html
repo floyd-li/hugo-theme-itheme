@@ -1,5 +1,12 @@
 
-{{ $sign := md5 .Destination}}
+{{- $src := .Destination -}}
+
+{{- with dict "Path" $src "Resources" .Page.Resources | partial "function/resource.html" -}}
+    {{- $src = .RelPermalink -}}
+{{- end -}}
+
+{{ $sign := md5 $src}}
+
 
 {{ $str := split .Text "|" }}
 
@@ -11,7 +18,7 @@
     <div class="image-sharesheet">
       <div class="image image-load image-asset image-{{ $sign }}" id="lht{{ $sign }}">
         <picture  class="picture">
-          <img class="picture-image" data-src="{{ .Destination | safeURL }}" alt="{{ .Text }}"  />
+          <img class="picture-image" data-src="{{ $src  | safeURL }}" alt="{{ .Text }}"  />
         </picture>
       </div>
     </div>
