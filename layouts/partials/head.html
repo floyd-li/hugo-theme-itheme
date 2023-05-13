@@ -10,11 +10,13 @@
 
     <link rel="canonical" href="{{ .Permalink | relURL }}">
 
-    <link rel="stylesheet" href="{{ "css/global.css" | relURL }}">
+    <link  rel="stylesheet" href="{{ "css/global.css" | relURL }}">
 
     <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 
     <link rel="stylesheet" href="{{ "css/search.css" | relURL }}" />
+
+    <link  id="theme-link" rel="stylesheet" href="{{ "css/dark.css" | relURL }}" />
 
     <!-- algolia related style -->
     {{ if site.Params.algolia.enabled }}
@@ -26,4 +28,6 @@
     <link rel="stylesheet" href="{{ .url | relURL }}" />
     {{ end }}
 
+    <!-- dark mode icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>

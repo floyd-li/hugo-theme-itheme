@@ -318,6 +318,21 @@ header{
   z-index: 9997;
   height: 3.05882rem;
   backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dark-mode-icon {
+  position: relative;
+  right: 1px;
+  z-index: 9997;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  font-size: 17px;
+}
+#dark-mode-icon.active {
+  transform: rotate(180deg);
 }
 
 .nav::after{
@@ -355,6 +370,7 @@ header{
   font-weight: 500;
   text-decoration: none !important;
   color: #676b5f;
+  display: flex;
 }
 
 @media only screen and (max-width: 734px) {
