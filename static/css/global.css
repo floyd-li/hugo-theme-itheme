@@ -323,18 +323,6 @@ header{
   align-items: center;
 }
 
-#dark-mode-icon {
-  position: relative;
-  right: 1px;
-  z-index: 9997;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  font-size: 17px;
-}
-#dark-mode-icon.active {
-  transform: rotate(180deg);
-}
-
 .nav::after{
   position: absolute;
   content: " ";
