@@ -16,7 +16,11 @@
     aria-label={label}
   >
     <div class="tile__media" aria-hidden="true">
-      <img class="cover image" data-src="{{ if .context.Params.cover }}{{ .context.Params.cover }}{{ else }}{{ site.Params.defaultCover }}{{ end }}" alt="lt"/>
+      {{- $src := .context.Params.cover | default site.Params.defaultCover -}}
+      {{- with .context.Resources.GetMatch (printf "%s" ($src)) -}}
+          {{- $src = .RelPermalink -}}
+      {{- end -}}
+      <img class="cover image" data-src="{{ $src }}" alt="lt"/>
     </div>
     <div class="tile__description" aria-hidden="true">
       <div class="tile__head">
