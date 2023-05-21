@@ -16,7 +16,9 @@
 
     <link rel="stylesheet" href="{{ "css/search.css" | relURL }}" />
 
-    <link  id="theme-link" rel="stylesheet" href="{{ "css/dark.css" | relURL }}" />
+    <!-- dark theme -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="/js/dark.js"></script>
 
     <!-- algolia related style -->
     {{ if site.Params.algolia.enabled }}
