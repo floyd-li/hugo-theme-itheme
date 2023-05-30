@@ -7,17 +7,21 @@
           <div class="nav-item-wrapper">
             <a href="{{ "posts" | relURL }} " class="nav-item-content">{{ i18n "posts" }}</a>
           </div>
+          {{- if .Site.GetPage "about" -}}
           <div class="nav-item-wrapper">
             <a href="{{ "about" | relURL }}" class="nav-item-content">{{ i18n "about" }}</a>
           </div>
+          {{- end -}}
+          {{- if site.Params.ShowRSS -}}
           <div class="nav-item-wrapper">
             <a href="{{ "index.xml" | relURL }}" class="nav-item-content" target="_blank">RSS</a>
           </div>
-          {{ if site.Params.algolia.enabled }}
+          {{- end -}}
+          {{- if site.Params.algolia.enabled -}}
           <div class="nav-item-wrapper">
             <a href="#" onclick="toggleSearchModal()" class="nav-item-content">{{ i18n "search" }}</a>
           </div>
-          {{ end }}
+          {{- end -}}
         </div>
       </div>
     </div>

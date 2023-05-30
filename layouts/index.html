@@ -21,7 +21,7 @@
       </ul>
     </div>
   </section>
-
+{{- if site.Params.ShowMore -}}
   <section class="more-from-newsroom">
     <div class="section-content">
       <h2 class="section-head">{{ i18n "moreArticles" }}</h2>
@@ -36,6 +36,7 @@
       </div>
     </div>
   </section>
+{{- end -}}
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var script = document.createElement("script");
