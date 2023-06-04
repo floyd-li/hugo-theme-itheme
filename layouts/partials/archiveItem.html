@@ -2,6 +2,9 @@
 {{ if .context.Params.cover }}
     {{ $cover = .context.Params.cover }}
 {{ end }}
+{{- with .context.Resources.GetMatch (printf "%s" ($cover)) -}}
+    {{- $cover = .RelPermalink -}}
+{{- end -}}
 
 <a href="{{ .context.Permalink }}" class="result__item row-anchor" aria-label="{{ .context.Title }}">
     <picture class="viewport-picture">
