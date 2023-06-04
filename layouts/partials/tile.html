@@ -1,15 +1,15 @@
 
 <li
   role="listitem"
-  class="tile-item nr-scroll-animation
-    {{ if eq .level  1 }}
-    item-hero
-    {{ else if eq .level 2 }}
-    item-2up
-    {{ else if eq .level  3 }}
-    item-3up
-    {{ end }}
-    "
+  {{- $itemClass := "" -}}
+  {{- if eq .level  1 -}}
+    {{- $itemClass = "item-hero" -}}
+  {{- else if eq .level 2 -}}
+    {{- $itemClass = "item-2up" -}}
+  {{- else if eq .level  3 -}}
+    {{- $itemClass = "item-3up" -}}
+  {{- end -}}
+  class="{{- printf "tile-item nr-scroll-animation %s" $itemClass -}}"
   style="--nr-animation-transform-y:20%;"
 >
   <a
