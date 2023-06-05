@@ -1,5 +1,5 @@
 baseURL = '/'
-languageCode = 'en '
+languageCode = 'en'
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 title = 'Apple Newsroom'
