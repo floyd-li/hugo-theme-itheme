@@ -1,0 +1,34 @@
+[home]
+    other = "Inicio"
+[posts]
+    other = "Artículos"
+[about]
+    other = "Acerca de"
+[latestArticles]
+    other = "Artículos Recientes"
+[moreArticles]
+    other = "Más Artículos"
+[viewArchive]
+    other = "Ver Archivo"
+[socialMedia]
+    other = "Redes Sociales"
+[related]
+    other = "Relacionados"
+[pagination]
+    other = "Paginación"
+[of]
+    other = "de"
+[allTags]
+    other = "Todas las Etiquetas"
+[author]
+    other = "Autor"
+[postDate]
+    other = "Publicado el"
+[copyright]
+    other = "Derechos de Autor"
+[licenses]
+    other = "Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)"
+[search]
+    other = "Buscar"
+[searchPlaceholder]
+    other = "Buscar título o descripción..."
